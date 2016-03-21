@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>发现</title>
+	</head>
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none;}
+		ul,li{list-style: none;}
+		html,body{width: 100%; height: 100%;}
+		html{background: #f8f8f8;}
+		body{max-width: 640px; margin: 0 auto; background: #fff; display:-webkit-box; display: -moz-box; -webkit-box-orient: vertical; -moz-box-orient: vertical;}
+		header{width: 100%; height: 38px; background: #0f91c5; display:-webkit-box; display: -moz-box; -webkit-box-align: center; -moz-box-align: center; -webkit-box-pack: center; -webkit-box-pack: center;}
+		header .box{width: 33.4%; height: 25px; line-height: 25px; text-align: center; color: #fff; font-size: 17px;}
+		.search{width: 100%; height:33px;}
+		.search input{float: left;}
+		.search input:nth-child(1){width:80.6%; height: 23px; border: 1px solid #ccc; margin:5px 5px 0; border-radius:5px; text-indent:10px;}
+		.search input:nth-child(2){width:14.4%; height: 23px; border:0; border-radius:5px; background: #0f91c5; color: #fff; margin-top: 5px;}
+		.mian{width: 100%; -webkit-box-flex: 1; -moz-box-flex: 1;}
+		.username{width: 100%; height: 71px; display: -moz-box; display: -webkit-box; border-top: 6px solid #f1f1f1;}
+		.username div:nth-child(1){width:1px; -webkit-box-flex:136; -moz-box-flex:136;}
+		.username div:nth-child(1) span{width:47px; height:47px; background: url(img/img1.jpg) no-repeat; border: 1px solid #333; background-size:100% 100%; border-radius:23.5px; display: block; margin: 10px 0 0 11px;}
+		.username div:nth-child(2){width:1px; -webkit-box-flex:504; -moz-box-flex:504;}
+		.username p:nth-child(1){font-size: 14px; color: #000; margin: 16px 0 12px;}
+		.username p:nth-child(2){font-size: 13px; color: #999;}				
+		footer{width:100%;height:40px; border-top:6px solid #f1f1f1; display: -moz-box; display: -webkit-box; font-size: 12px; margin-top: 5px;}
+		footer a{-webkit-box-flex: 1; -moz-box-flex: 1; display: -webkit-box; -moz-box-align:center; text-align:center; display: block; color: #ccc;}
+		footer a:nth-child(2){color: #0f91c5;}
+		footer a i{margin-top: 3px; display: inline-block;}
+		.footer_3a{position: relative;}
+		.footer_3a div{width: 42px; height: 42px; background: #fff; border: 1px solid #ccc; border-radius:21px ; position: absolute; left: 50%; top:50%; margin:-4px 0 0 -21px; z-index: 1; }
+		.footer_3a div i{font-size: 22px; margin-top:8px;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<script src="js/iscroll.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<body>
+		<header>
+			<div class="box">发现</div>		
+		</header>	
+		<div class="search">
+			<input type="text" placeholder="请输入昵称"/>
+			<input type="button" value="搜索"/>
+		</div>
+		<div class="mian">
+			<div class="username">
+				<div><span></span></div>
+				<div>
+					<p>我叫小萌</p>
+					<p>我是小萌我怕誰！哈哈哈哈！</p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="attention.html"><i class="iconfont">&#xe69b;</i><p>首页</p></a>
+			<a href="find.html"><i class="iconfont">&#xe605;</i><p>发现</p></a>
+			<a class="footer_3a" href="###"><div><i class="iconfont">&#xec81;</i></div></a>
+			<a href="my.html"><i class="iconfont">&#xe6bc;</i><p>我的</p></a>
+			<a href="###"><i class="iconfont">&#xe6b3;</i><p>退出</p></a>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		$('.search input').eq(0).on('tap',function(ev){
+			ev.preventDefault();
+			$.ajax({
+				url: "http://localhost:8080/Proxy/FootBall/user/json/queryall.do",
+			   data: {"loginname":loginname,"password":password},
+			   success: function(){
+			   	console.log(ev);
+			   }
+			})
+		});
+	</script>
+</html>

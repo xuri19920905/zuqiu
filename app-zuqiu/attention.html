@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>关注</title>
+	</head>
+	<link rel="stylesheet" href="css/iconfont.css" />
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none;}
+		ul,li{list-style: none;}
+		html,body{width: 100%; height: 100%;}
+		html{background: #f8f8f8;}
+		body{max-width: 640px; margin: 0 auto; background: #fff; display:-webkit-box; display: -moz-box; -webkit-box-orient: vertical; -moz-box-orient: vertical;}
+		header{width: 100%; height: 38px; background: #0f91c5; display:-webkit-box; display: -moz-box; -webkit-box-align: center; -moz-box-align: center; -webkit-box-pack: center; -webkit-box-pack: center; border-bottom: 6px solid #f1f1f1;}
+		header .box{width: 33.4%; height: 25px; line-height: 25px;  display:-webkit-box; display: -moz-box; -webkit-box-align: center; -moz-box-align: center; -webkit-box-pack: center; -webkit-box-pack: center; font-size: 12px;}
+		header .box a{width: 50%; height: 100%; display:-webkit-box; display: -moz-box; -webkit-box-align: center; -moz-box-align: center; -webkit-box-pack: center; -webkit-box-pack: center;}
+		header .box a:nth-child(1){background:#57b2d7; border-radius:12.5px 0 0 12.5px ; color: #b1e4f8;}
+		header .box a:nth-child(2){background:#79c1df; border-radius:0 12.5px 12.5px 0; color: #fff;}
+		.mian{width: 100%; -webkit-box-flex: 1; -moz-box-flex: 1;}
+		.username{width: 100%; height: 71px; display: -moz-box; display: -webkit-box;}
+		.username div:nth-child(1){width:1px; -webkit-box-flex:136; -moz-box-flex:136;}
+		.username div:nth-child(1) span{width:47px; height:47px; background: url(img/img1.jpg) no-repeat; border: 1px solid #333; background-size:100% 100%; border-radius:23.5px; display: block; margin: 10px 0 0 11px;}
+		.username div:nth-child(2){width:1px; -webkit-box-flex:360; -moz-box-flex:360;}
+		.username p:nth-child(1){font-size: 14px; color: #000; margin: 16px 0 12px;}
+		.username p:nth-child(2){font-size: 13px; color: #999;}
+		.username div:nth-child(3){width:1px; -webkit-box-flex:144; -moz-box-flex:144; font-size: 12px; color: #999; display: -moz-box; display: -webkit-box;}
+		.username div:nth-child(3) span{margin: 16px 6px 0 0; display: block;}
+		.username div:nth-child(3) img{margin-top: 16px; width: 12px; height: 12px;}
+		.print{width: 100%; height: 317px; border-bottom: 6px solid #f1f1f1;}
+		.print img{width: 100%; height: 284px;}
+		.print div{width: 100%; height: 33px; line-height: 33px; text-indent: 24px; font-size: 15px;}
+		.bottom{width: 100%; height: 70px; display: -moz-box; display: -webkit-box;}
+		.bottom div:nth-child(1){width:1px; -webkit-box-flex:136; -moz-box-flex:136;}
+		.bottom div:nth-child(1) span{width:47px; height:47px; background: url(img/img1.jpg) no-repeat; border: 1px solid #333; background-size:100% 100%; border-radius:23.5px; display: block; margin: 10px 0 0 11px;}
+		.bottom div:nth-child(2){width:1px; -webkit-box-flex:360; -moz-box-flex:360;}
+		.bottom p:nth-child(1){font-size: 14px; color: #000; margin: 16px 0 12px;}
+		.bottom p:nth-child(2){font-size: 13px; color: #999;}
+		.bottom div:nth-child(3){width:1px; -webkit-box-flex:144; -moz-box-flex:144; font-size: 12px; color: #999; display: -moz-box; display: -webkit-box;}
+		.bottom div:nth-child(3) span{margin: 16px 6px 0 0; display: block;}
+		.bottom div:nth-child(3) img{margin-top: 16px; width: 12px; height: 12px;}
+		footer{width:100%;height:40px; border-top:6px solid #f1f1f1; display: -moz-box; display: -webkit-box; font-size: 12px; margin-top: 5px;}
+		footer a{-webkit-box-flex: 1; -moz-box-flex: 1; display: -webkit-box; -moz-box-align:center; text-align:center; display: block; color: #ccc;}
+		footer a:first-child{color: #0f91c5;}
+		footer a i{margin-top: 3px; display: inline-block;}
+		.footer_3a{position: relative;}
+		.footer_3a div{width: 42px; height: 42px; background: #fff; border: 1px solid #ccc; border-radius:21px ; position: absolute; left: 50%; top:50%; margin:-4px 0 0 -21px; z-index: 1; }
+		.footer_3a div i{font-size: 22px; margin-top:8px;}
+	</style>
+	<script src="js/iscroll.js"></script>
+	<body>
+		<header>
+			<div class="box">
+				<a href="hotPints.html">热点</a>
+				<a href="attention.html">关注</a>
+			</div>		
+		</header>						
+		<div class="mian" id="wrapper">
+			<div id="scroller">
+				<div class="username">
+					<div><span></span></div>
+					<div>
+						<p>我叫小萌</p>
+						<p>我是小萌我怕誰！哈哈哈哈！</p>
+					</div>
+					<div>
+						<span>382344</span>
+						<a href="###"><img src="img/img1.png"/></a>
+					</div>
+				</div>	
+				<div class="print">
+					<img src="img/img2.jpg"/>
+					<div>小丸子啊小丸子！</div>
+				</div>
+				<div class="bottom">
+					<div><span></span></div>
+					<div>
+						<p>Lily</p>
+						<p>Hello~ my name is Lily!</p>
+					</div>
+					<div>
+						<span>382344</span>
+						<a href="###"><img src="img/img1.png"/></a>
+					</div>
+				</div>
+				<div class="print">
+					<img src="img/img2.jpg"/>
+					<div>小丸子啊小丸子！</div>
+				</div>
+				<div class="bottom">
+					<div><span></span></div>
+					<div>
+						<p>Lily</p>
+						<p>Hello~ my name is Lily!</p>
+					</div>
+					<div>
+						<span>382344</span>
+						<a href="###"><img src="img/img1.png"/></a>
+					</div>
+				</div>
+				<div class="print">
+					<img src="img/img2.jpg"/>
+					<div>小丸子啊小丸子！</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="attention.html"><i class="iconfont">&#xe69b;</i><p>首页</p></a>
+			<a href="find.html"><i class="iconfont">&#xe605;</i><p>发现</p></a>
+			<a class="footer_3a" href="###"><div><i class="iconfont">&#xec81;</i></div></a>
+			<a href="my.html"><i class="iconfont">&#xe6bc;</i><p>我的</p></a>
+			<a href="###"><i class="iconfont">&#xe6b3;</i><p>退出</p></a>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		var myscroll;
+		function loaded(){
+			setTimeout(function(){
+				myscorll = new iScroll('wrapper',{
+					hScroll:false,
+					hScrollbar:false,
+					vScrollbar:false
+				});
+			},100)
+		}
+		window.addEventListener('load',loaded,false);
+	</script>
+</html>

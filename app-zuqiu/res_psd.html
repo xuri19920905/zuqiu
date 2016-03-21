@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>足球圈子 — 重置密码</title>
+	</head>
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none;}
+		html,body{width: 100%; height: 100%;}
+		html{background: #f8f8f8;}
+		body{max-width: 640px; margin: 0 auto; background: #fff;}
+		header{width: 100%; height:37px ; line-height: 37px; background: #0f91c5; color: #fff; font-size: 17px; text-align: center;}
+		.form{margin: 0 15px;}
+		.form input{width: 100%; height: 32px; border: 0; border-bottom: 1px solid #7f7f7f; margin-top: 9px; outline: medium;}
+		.form input:nth-child(2){margin-top: 27px;}
+		
+		.form button{width: 100%; height: 38px; line-height: 38px; background: #0f91c5; text-align: center; color: #fff; font-size: 17px; border: 0; margin-top: 38px; border-radius:5px ;}
+	</style>
+	<script src="js/zepto.min.js"></script>
+	<body>
+		<header>足球圈子 — 重置密码</header>
+		<div class="form">
+			<input id="psd" type="password" placeholder="新密码 ( 密码在6~16位之间 )"/>
+			<input id="newpsd" type="password" placeholder="重复新密码"/>
+			
+			<button>提交</button>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		$('#psd').blur(pwd);
+		function pwd(){
+			var reg = /^\w{6,16}$/;
+			var val = $('#psd').val();
+			if(reg.test(val)){
+				return true;
+			}else{
+				alert('错误');
+				return false;
+			}
+		}
+		$('#newpsd').blur(pwd2);
+		function pwd2(){
+			var reg = /^\w{6,16}$/;
+			var val1 = $('#newpsd').val();
+			var val2 = $('#psd').val();
+			if(reg.test(val1)&&val1==val2){
+				return true;
+			}else{
+				alert('错误');
+				return false;
+			}
+		}
+		
+	</script>
+</html>

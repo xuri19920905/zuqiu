@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>足球圈子 — 登录</title>
+	</head>
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none;}
+		html,body{width: 100%; height: 100%;}
+		html{background: #f8f8f8;}
+		body{max-width: 640px; margin: 0 auto; background: #fff;}
+		header{width: 100%; height:37px ; line-height: 37px; background: #0f91c5; color: #fff; font-size: 17px; text-align: center;}
+		.form{margin: 0 15px;}
+		.form input{width: 100%; height: 32px; border: 0; border-bottom: 1px solid #7f7f7f; margin-top: 9px; outline: medium; text-indent: 10px}
+		.form input:nth-child(2){margin-top: 27px;}
+		.form a{color: #61b7da; text-decoration: underline; margin-top: 26px; display: inline-block;}
+		.form a:nth-child(2){float: right;}
+		.form button{width: 100%; height: 38px; line-height: 38px; background: #0f91c5; text-align: center; font-size: 17px; border: 0; margin-top: 38px; border-radius:5px ; color: #fff; }
+	</style>
+	<script src="js/zepto.min.js"></script>
+	<body>
+		<header>足球圈子 — 登录</header>
+		<div class="form">
+			<input id="num" type="text" placeholder="手机MV号"/>
+			<input id="psd" type="password" placeholder="密码"/>
+			<div class="links">
+				<a href="register.html">注册</a>
+				<a href="fgt_psd.html">忘记密码？</a>
+			</div>
+			<button>提交</button>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		$('#num').blur(num);
+		function num(){
+			var reg = /^[1][358][0-9]{9}$/;
+			var val = $('#num').val();
+			if(reg.test(val)){
+				return true;
+			}else{
+				alert('错误');
+				return false;
+			}
+		}
+		$('#psd').blur(pwd);
+		function pwd(){
+			var reg = /^\w{6,16}$/;
+			var val = $('#psd').val();
+			if(reg.test(val)){
+				return true;
+			}else{
+				alert('错误');
+				return false;
+			}
+		}
+		$('button').on('tap',function(ev){
+			ev.preventDefault();
+			var loginname = $('#num').val();
+			var password = $('#psd').val();
+			if(num()&&pwd()){
+				$.ajax({
+				   url: "http://localhost:8080/Proxy/FootBall/user/json/reg.do",
+				   data: {"loginname":loginname,"password":password},
+				   success: function(){
+				   window.location.href = "hotPints.html";
+				   }
+				});	
+			}				
+		})
+
+	</script>
+</html>
